@@ -1,59 +1,90 @@
-# NgOprimizedImage
+# NgOptimizedImage Learning Lab
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+![NgOptimizedImage Learning Lab overview](public/readme-preview.png)
 
-## Development server
+This is a test Angular project for learning and practicing `NgOptimizedImage`.
 
-To start a local development server, run:
+The project is intentionally built as a skeleton: it provides routes, layout, exercise slots, notes, and verification checklists, but leaves the actual `NgOptimizedImage` implementation work for the learner to add manually.
 
-```bash
-ng serve
+## What This Project Teaches
+
+- Basic directive activation with `ngSrc`.
+- Marking important images as `priority`.
+- Understanding LCP image behavior.
+- Using `width` and `height` to prevent layout shifts.
+- Comparing correct and incorrect image dimensions.
+- Using fill-mode layouts with positioned parent containers.
+- Practicing `object-fit` and `object-position`.
+- Working with responsive images and the `sizes` attribute.
+- Inspecting generated `srcset` behavior.
+- Trying image placeholders.
+- Comparing blurred, non-blurred, and data URL placeholders.
+- Configuring built-in image loaders.
+- Preparing a custom image loader.
+- Experimenting with loader params.
+- Migrating CSS `background-image` patterns to image elements.
+- Creating controlled broken examples to learn Angular diagnostics and warnings.
+- Verifying image behavior with browser DevTools, Network, Console, and Performance panels.
+
+## Project Structure
+
+Main learning pages live under:
+
+```text
+src/app/pages/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The current exercise routes are:
 
-## Code scaffolding
+- `/basic-ng-src`
+- `/priority-lcp`
+- `/dimensions`
+- `/fill-mode`
+- `/responsive-images`
+- `/placeholders`
+- `/loader-demo`
+- `/custom-loader`
+- `/background-migration`
+- `/diagnostics`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Shared layout components live under:
 
-```bash
-ng generate component component-name
+```text
+src/app/shared/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Image loader placeholders live under:
 
-```bash
-ng generate --help
+```text
+src/app/image-loaders/
 ```
 
-## Building
+## Development Server
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Run:
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Then open:
 
-For end-to-end (e2e) testing, run:
+```text
+http://localhost:4200/
+```
+
+## Build
+
+Run:
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Unit Tests
 
-## Additional Resources
+Run:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm test -- --watch=false
+```

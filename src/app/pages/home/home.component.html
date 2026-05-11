@@ -1,0 +1,28 @@
+<section class="hero">
+  <p class="eyebrow">Learning skeleton</p>
+  <h1>Build your own NgOptimizedImage examples one topic at a time.</h1>
+  <p>
+    This project provides routing, layout, notes, and verification prompts. The actual
+    NgOptimizedImage code is intentionally left for you to add inside each exercise slot.
+  </p>
+</section>
+
+<section class="workflow" aria-labelledby="workflow-heading">
+  <h2 id="workflow-heading">Suggested Workflow</h2>
+  <ol>
+    <li>Open one demo route.</li>
+    <li>Add only the image code needed for that concept.</li>
+    <li>Run the app and inspect DOM, Network, Console, and Performance behavior.</li>
+    <li>Document what changed before moving to the next route.</li>
+  </ol>
+</section>
+
+<section class="demo-grid" aria-label="Available exercises">
+  @for (demo of demos; track demo.path) {
+    <a class="demo-card" [routerLink]="demo.path">
+      <span>{{ demo.order }}</span>
+      <h2>{{ demo.shortTitle }}</h2>
+      <p>{{ demo.summary }}</p>
+    </a>
+  }
+</section>

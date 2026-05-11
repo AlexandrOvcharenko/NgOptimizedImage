@@ -1,0 +1,38 @@
+<app-demo-shell [section]="section">
+  <div exercise>
+    <div class="comparison-grid three-up">
+      <article class="comparison-cell">
+        <h3>Generated placeholder</h3>
+        <div class="exercise-slot compact">
+          <!-- TODO: Add a generated placeholder example yourself. -->
+          <p>Use this after you configure a loader.</p>
+        </div>
+      </article>
+
+      <article class="comparison-cell">
+        <h3>Data URL placeholder</h3>
+        <div class="exercise-slot compact">
+          <!-- TODO: Add a small data URL placeholder example yourself. -->
+          <p>Keep the encoded placeholder intentionally tiny.</p>
+        </div>
+      </article>
+
+      <article class="comparison-cell">
+        <h3>No blur</h3>
+        <div class="exercise-slot compact">
+          <!-- TODO: Add a non-blurred placeholder example yourself. -->
+          <p>Use this to compare perceived loading behavior.</p>
+        </div>
+      </article>
+    </div>
+
+    <app-code-block label="Starting template" [code]="startingPoint" />
+  </div>
+
+  <div notes>
+    <p>
+      Placeholder examples depend heavily on loader behavior and bundle size. Add one variant at a
+      time and verify both visual loading and payload impact.
+    </p>
+  </div>
+</app-demo-shell>

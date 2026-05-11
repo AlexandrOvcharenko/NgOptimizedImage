@@ -1,0 +1,17 @@
+<app-demo-shell [section]="section" [checklist]="checklist">
+  <div exercise>
+    <div class="exercise-slot image-stage">
+      <!-- TODO: Add an image that uses your chosen built-in loader yourself. -->
+      <p>Use this slot after you add a loader provider.</p>
+    </div>
+
+    <app-code-block label="Provider slot" [code]="configSlot" />
+  </div>
+
+  <div notes>
+    <p>
+      The project includes an empty image-loaders folder so loader configuration can stay separate
+      from the demo pages. Add provider code there when you start this exercise.
+    </p>
+  </div>
+</app-demo-shell>

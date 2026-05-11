@@ -1,0 +1,30 @@
+<app-demo-shell [section]="section">
+  <div exercise>
+    <div class="comparison-grid">
+      <article class="comparison-cell">
+        <h3>Cover frame</h3>
+        <div class="exercise-slot fill-frame cover-frame">
+          <!-- TODO: Add a fill-mode image and try object-fit: cover yourself. -->
+          <p>Parent is positioned and has a stable aspect ratio.</p>
+        </div>
+      </article>
+
+      <article class="comparison-cell">
+        <h3>Contain frame</h3>
+        <div class="exercise-slot fill-frame contain-frame">
+          <!-- TODO: Add a fill-mode image and try object-fit: contain yourself. -->
+          <p>Use this to compare letterboxing behavior.</p>
+        </div>
+      </article>
+    </div>
+
+    <app-code-block label="Starting template" [code]="startingPoint" />
+  </div>
+
+  <div notes>
+    <p>
+      The frames already provide the non-image layout work. Your task is to add the image element
+      and choose the object-fit and object-position rules.
+    </p>
+  </div>
+</app-demo-shell>

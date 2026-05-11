@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.code-block {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #d8deea;
+  border-radius: 8px;
+  background: #101827;
+  color: #e5edf8;
+}
+
+figcaption {
+  border-bottom: 1px solid #273349;
+  color: #aebbd0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 10px 14px;
+  text-transform: uppercase;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+  padding: 14px;
+}
+
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}

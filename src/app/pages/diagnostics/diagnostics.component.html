@@ -1,0 +1,30 @@
+<app-demo-shell [section]="section" [checklist]="checklist">
+  <div exercise>
+    <div class="diagnostic-stack">
+      <article class="diagnostic-case">
+        <h3>Case 1: broken</h3>
+        <div class="exercise-slot compact warning-slot">
+          <!-- TODO: Add one intentionally broken example yourself. -->
+          <p>Keep only one active warning here.</p>
+        </div>
+      </article>
+
+      <article class="diagnostic-case">
+        <h3>Case 2: fixed</h3>
+        <div class="exercise-slot compact">
+          <!-- TODO: Add the fixed version for comparison yourself. -->
+          <p>Use this to prove the warning was caused by the broken case.</p>
+        </div>
+      </article>
+    </div>
+
+    <app-code-block label="Starting template" [code]="startingPoint" />
+  </div>
+
+  <div notes>
+    <p>
+      This page is allowed to be noisy while you learn. Keep examples small so each warning can be
+      explained and fixed independently.
+    </p>
+  </div>
+</app-demo-shell>

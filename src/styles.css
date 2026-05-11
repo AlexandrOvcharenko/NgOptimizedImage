@@ -1,1 +1,196 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  background: #f5f7fb;
+  color: #1d2433;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.exercise-slot {
+  display: grid;
+  min-width: 0;
+  min-height: 260px;
+  place-items: center;
+  border: 1px dashed #93a4bb;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgb(15 118 110 / 0.08), transparent 45%),
+    repeating-linear-gradient(45deg, #f8fafc, #f8fafc 12px, #eef2f7 12px, #eef2f7 24px);
+  color: #516071;
+  padding: 18px;
+  text-align: center;
+}
+
+[exercise] {
+  display: grid;
+  min-width: 0;
+  gap: 14px;
+}
+
+.exercise-slot.compact {
+  min-height: 180px;
+}
+
+.exercise-slot p {
+  width: min(100%, 32ch);
+  max-width: 36ch;
+  margin: 0;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+.image-stage {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.hero-stage {
+  align-items: end;
+  aspect-ratio: 16 / 8;
+  justify-items: start;
+  min-height: 360px;
+  text-align: left;
+}
+
+.hero-stage h2,
+.hero-stage p,
+.comparison-cell h3,
+.diagnostic-case h3 {
+  margin: 0;
+}
+
+.hero-stage h2 {
+  color: #172033;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.demo-kicker {
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+  gap: 16px;
+}
+
+.comparison-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.comparison-cell,
+.diagnostic-case {
+  display: grid;
+  min-width: 0;
+  gap: 10px;
+}
+
+.comparison-cell h3,
+.diagnostic-case h3 {
+  color: #172033;
+  font-size: 0.98rem;
+}
+
+.warning-slot {
+  border-color: #c2410c;
+  background:
+    linear-gradient(135deg, rgb(194 65 12 / 0.1), transparent 45%),
+    repeating-linear-gradient(45deg, #fff7ed, #fff7ed 12px, #ffedd5 12px, #ffedd5 24px);
+}
+
+.fill-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.fill-frame.exercise-slot p {
+  width: min(100%, 18ch);
+}
+
+.cover-frame {
+  background-color: #ecfeff;
+}
+
+.contain-frame {
+  background-color: #f0fdf4;
+}
+
+.responsive-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 32%);
+  gap: 16px;
+}
+
+.wide-column,
+.narrow-column {
+  display: grid;
+  gap: 10px;
+}
+
+.wide-column h3,
+.narrow-column h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 0.98rem;
+}
+
+.background-demo {
+  display: grid;
+  gap: 10px;
+}
+
+.migration-frame {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.diagnostic-stack {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .comparison-grid,
+  .comparison-grid.three-up,
+  .responsive-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stage {
+    aspect-ratio: auto;
+    min-height: 320px;
+  }
+}

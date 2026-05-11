@@ -1,0 +1,30 @@
+<app-demo-shell [section]="section">
+  <div exercise>
+    <div class="comparison-grid">
+      <article class="background-demo old-background">
+        <h3>CSS background slot</h3>
+        <div class="exercise-slot compact migration-frame">
+          <!-- TODO: Add a temporary CSS background-image during the exercise yourself. -->
+          <p>Use this side as the behavior baseline.</p>
+        </div>
+      </article>
+
+      <article class="background-demo migrated-background">
+        <h3>Image element slot</h3>
+        <div class="exercise-slot compact fill-frame migration-frame">
+          <!-- TODO: Add the migrated image element yourself. -->
+          <p>Use this side for the semantic image version.</p>
+        </div>
+      </article>
+    </div>
+
+    <app-code-block label="Starting template" [code]="startingPoint" />
+  </div>
+
+  <div notes>
+    <p>
+      This route is for matching visual behavior first, then checking loading behavior. Decide
+      whether the image is meaningful or decorative before writing the final alt text.
+    </p>
+  </div>
+</app-demo-shell>
