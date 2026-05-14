@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { getLabSection } from '../../data/lab-section-lookup';
@@ -6,21 +7,26 @@ import { DemoShellComponent } from '../../shared/demo-shell/demo-shell.component
 
 @Component({
   selector: 'app-dimensions',
-  imports: [CodeBlockComponent, DemoShellComponent],
+  imports: [CodeBlockComponent, DemoShellComponent, NgOptimizedImage],
   templateUrl: './dimensions.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DimensionsComponent {
   protected readonly section = getLabSection('/dimensions');
-  protected readonly startingPoint = `<div class="comparison-grid">
+  protected readonly checklist = [
+    'Inspect both rendered images in the Elements panel.',
+    'Compare the width and height attributes with the natural image size.',
+    'Open Console and find the warning produced by the intentional mismatch.',
+  ];
+  protected readonly exampleCode = `<div class="comparison-grid">
   <article class="comparison-cell">
     <h3>Correct dimensions</h3>
-    <!-- TODO: Add a correct dimensions example. -->
+    <img ngSrc="/coffee.jpg" width="4889" height="3728" alt="Coffee beans" />
   </article>
 
   <article class="comparison-cell">
     <h3>Intentional mismatch</h3>
-    <!-- TODO: Add a controlled warning example. -->
+    <img ngSrc="/coffee.jpg" width="4889" height="1200" alt="Coffee beans" />
   </article>
 </div>`;
 }

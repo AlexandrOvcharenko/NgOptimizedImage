@@ -1,13 +1,7 @@
 <app-demo-shell [section]="section" [checklist]="checklist">
   <div exercise>
-    <section class="exercise-slot hero-stage">
-      <div>
-        <p class="demo-kicker">Priority experiment</p>
-        <h2>Hero image slot</h2>
-      </div>
-
-      <!-- TODO: Add your priority/LCP image example yourself. -->
-      <p>Reserve this area for a large above-the-fold image.</p>
+    <section class="exercise-slot image-stage">
+      <img ngSrc="/coffee.jpg" width="4889" height="3728" alt="Coffee" priority />
     </section>
 
     <app-code-block label="Starting template" [code]="startingPoint" />

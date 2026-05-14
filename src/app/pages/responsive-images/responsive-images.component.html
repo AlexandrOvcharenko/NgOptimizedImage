@@ -3,28 +3,40 @@
     <div class="responsive-layout">
       <main class="wide-column">
         <h3>Wide column</h3>
-        <div class="exercise-slot compact">
-          <!-- TODO: Add a responsive image for the wide column yourself. -->
-          <p>This column becomes full width on small screens.</p>
+        <div class="exercise-slot compact responsive-frame">
+          <img
+            class="responsive-image"
+            ngSrc="/coffee.jpg"
+            width="4889"
+            height="3728"
+            sizes="(max-width: 900px) 100vw, 60vw"
+            alt="Coffee beans"
+          />
         </div>
       </main>
 
       <aside class="narrow-column">
         <h3>Sidebar</h3>
-        <div class="exercise-slot compact">
-          <!-- TODO: Add a smaller responsive image for the sidebar yourself. -->
-          <p>This column should request a smaller candidate.</p>
+        <div class="exercise-slot compact responsive-frame">
+          <img
+            class="responsive-image"
+            ngSrc="/coffee.jpg"
+            width="4889"
+            height="3728"
+            sizes="(max-width: 900px) 100vw, 30vw"
+            alt="Coffee beans"
+          />
         </div>
       </aside>
     </div>
 
-    <app-code-block label="Starting template" [code]="startingPoint" />
+    <app-code-block label="Responsive examples" [code]="exampleCode" />
   </div>
 
   <div notes>
     <p>
-      Use this route with responsive browser resizing. The skeleton gives you two different layout
-      widths so your sizes experiments have a visible reason to differ.
+      Both examples use the same source image, but their sizes values describe different layout
+      widths. Resize the viewport and inspect how the rendered size changes.
     </p>
   </div>
 </app-demo-shell>

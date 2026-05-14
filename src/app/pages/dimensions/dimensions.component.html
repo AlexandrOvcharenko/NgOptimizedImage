@@ -1,30 +1,40 @@
-<app-demo-shell [section]="section">
+<app-demo-shell [section]="section" [checklist]="checklist">
   <div exercise>
     <div class="comparison-grid">
       <article class="comparison-cell">
         <h3>Correct dimensions</h3>
-        <div class="exercise-slot compact">
-          <!-- TODO: Add a correct dimensions example yourself. -->
-          <p>Use this for a stable, expected case.</p>
+        <div class="exercise-slot compact dimension-frame">
+          <img
+            class="dimension-image"
+            ngSrc="/coffee.jpg"
+            width="4889"
+            height="3728"
+            alt="Coffee beans"
+          />
         </div>
       </article>
 
       <article class="comparison-cell">
         <h3>Intentional mismatch</h3>
-        <div class="exercise-slot compact warning-slot">
-          <!-- TODO: Add a controlled dimensions warning example yourself. -->
-          <p>Use this for one intentional mistake at a time.</p>
+        <div class="exercise-slot compact warning-slot dimension-frame">
+          <img
+            class="dimension-image"
+            ngSrc="/coffee.jpg"
+            width="4889"
+            height="1200"
+            alt="Coffee beans with intentionally wrong dimensions"
+          />
         </div>
       </article>
     </div>
 
-    <app-code-block label="Starting template" [code]="startingPoint" />
+    <app-code-block label="Dimensions examples" [code]="exampleCode" />
   </div>
 
   <div notes>
     <p>
-      Keep the broken case isolated. When a warning appears, fix only that example and verify the
-      warning disappears before adding another mistake.
+      The left image uses the real intrinsic size of the local file. The right image deliberately
+      uses the wrong height so Angular can warn about incorrect dimensions in development mode.
     </p>
   </div>
 </app-demo-shell>
