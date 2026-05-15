@@ -3,12 +3,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { getLabSection } from '../../data/lab-section-lookup';
 import { CodeBlockComponent } from '../../shared/code-block/code-block.component';
 import { DemoShellComponent } from '../../shared/demo-shell/demo-shell.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-placeholders',
-  imports: [CodeBlockComponent, DemoShellComponent],
+  imports: [CodeBlockComponent, DemoShellComponent, NgOptimizedImage],
   templateUrl: './placeholders.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlaceholdersComponent {
   protected readonly section = getLabSection('/placeholders');
