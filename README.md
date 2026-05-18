@@ -23,7 +23,6 @@ The project is intentionally built as a skeleton: it provides routes, layout, ex
 - Preparing a custom image loader.
 - Experimenting with loader params.
 - Migrating CSS `background-image` patterns to image elements.
-- Creating controlled broken examples to learn Angular diagnostics and warnings.
 - Verifying image behavior with browser DevTools, Network, Console, and Performance panels.
 
 ## Project Structure
@@ -45,7 +44,6 @@ The current exercise routes are:
 - `/loader-demo`
 - `/custom-loader`
 - `/background-migration`
-- `/diagnostics`
 
 Shared layout components live under:
 
