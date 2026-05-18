@@ -1,26 +1,20 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+import { Component } from '@angular/core';
 
 import { getLabSection } from '../../data/lab-section-lookup';
-import { CodeBlockComponent } from '../../shared/code-block/code-block.component';
 import { DemoShellComponent } from '../../shared/demo-shell/demo-shell.component';
 
 @Component({
   selector: 'app-background-migration',
-  imports: [CodeBlockComponent, DemoShellComponent],
+  imports: [DemoShellComponent, NgOptimizedImage],
   templateUrl: './background-migration.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './background-migration.component.css',
 })
 export class BackgroundMigrationComponent {
   protected readonly section = getLabSection('/background-migration');
-  protected readonly startingPoint = `<div class="comparison-grid">
-  <article class="background-demo old-background">
-    <h3>CSS background slot</h3>
-    <!-- TODO: Add a temporary CSS background-image during the exercise. -->
-  </article>
-
-  <article class="background-demo migrated-background">
-    <h3>Image element slot</h3>
-    <!-- TODO: Add the migrated image element here. -->
-  </article>
-</div>`;
+  protected readonly checklist = [
+    'Compare cover cropping between CSS background and NgOptimizedImage fill.',
+    'Inspect Network: note how the CSS panel requests one URL vs responsive srcset.',
+    'Decide alt text if the image is content vs decorative.',
+  ];
 }

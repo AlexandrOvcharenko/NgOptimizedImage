@@ -1,30 +1,35 @@
-<app-demo-shell [section]="section">
+<app-demo-shell [section]="section" [checklist]="checklist">
   <div exercise>
     <div class="comparison-grid">
       <article class="background-demo old-background">
         <h3>CSS background slot</h3>
-        <div class="exercise-slot compact migration-frame">
-          <!-- TODO: Add a temporary CSS background-image during the exercise yourself. -->
-          <p>Use this side as the behavior baseline.</p>
-        </div>
+        <div
+          class="exercise-slot compact migration-frame migration-css-panel"
+          role="img"
+          aria-label="Sneakers shown as a CSS background"
+        ></div>
       </article>
 
       <article class="background-demo migrated-background">
         <h3>Image element slot</h3>
         <div class="exercise-slot compact fill-frame migration-frame">
-          <!-- TODO: Add the migrated image element yourself. -->
-          <p>Use this side for the semantic image version.</p>
+          <img
+            class="fill-image cover-image"
+            ngSrc="sneakers.jpg"
+            fill
+            sizes="(max-width: 900px) 100vw, 50vw"
+            alt="Pair of sneakers on a light studio background"
+          />
         </div>
       </article>
     </div>
-
-    <app-code-block label="Starting template" [code]="startingPoint" />
   </div>
 
   <div notes>
     <p>
-      This route is for matching visual behavior first, then checking loading behavior. Decide
-      whether the image is meaningful or decorative before writing the final alt text.
+      Match visual framing first (cover + centered crop), then contrast loading: CSS backgrounds do
+      not participate in <code>NgOptimizedImage</code> diagnostics or responsive srcset unless you
+      build URLs yourself.
     </p>
   </div>
 </app-demo-shell>

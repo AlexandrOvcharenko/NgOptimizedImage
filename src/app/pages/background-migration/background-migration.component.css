@@ -1,0 +1,8 @@
+.migration-css-panel {
+  padding: 0;
+  place-items: stretch;
+  background-image: url('https://6a0af781dbb8bba1984e949e.imgix.net/sneakers.jpg?auto=format&fit=crop&w=1200');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
