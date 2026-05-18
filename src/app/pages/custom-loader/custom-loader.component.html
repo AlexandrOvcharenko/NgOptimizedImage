@@ -1,17 +1,40 @@
 <app-demo-shell [section]="section" [checklist]="checklist">
   <div exercise>
-    <div class="exercise-slot image-stage">
-      <!-- TODO: Add an image that exercises your custom loader yourself. -->
-      <p>Use this slot to verify your custom URL generation.</p>
+    <div class="comparison-grid">
+      <article class="comparison-cell">
+        <h3>Baseline</h3>
+        <div class="exercise-slot image-stage">
+          <img
+            ngSrc="sneakers.jpg"
+            width="2898"
+            height="3624"
+            sizes="(max-width: 720px) 100vw, min(720px, 45vw)"
+            alt="Sneakers in color"
+          />
+        </div>
+      </article>
+      <article class="comparison-cell">
+        <h3>loaderParams.mono</h3>
+        <div class="exercise-slot image-stage">
+          <img
+            ngSrc="sneakers.jpg"
+            width="2898"
+            height="3624"
+            sizes="(max-width: 720px) 100vw, min(720px, 45vw)"
+            alt="Sneakers in grayscale via custom loader"
+            [loaderParams]="monoParams"
+          />
+        </div>
+      </article>
     </div>
-
-    <app-code-block label="Custom loader slot" [code]="loaderSlot" />
   </div>
 
   <div notes>
     <p>
-      Keep the first custom loader boring and predictable. After it works, add a second example that
-      uses params to change the generated URL.
+      This route overrides the root Imgix loader: <code>providers: customLoaderProviders</code> on
+      <code>CustomLoaderComponent</code> supplies <code>IMAGE_LOADER</code> for images in this page
+      only. Other routes still use <code>provideImgixLoader</code> from
+      <code>image-loader.config.ts</code>.
     </p>
   </div>
 </app-demo-shell>
