@@ -121,18 +121,6 @@ export const LAB_SECTIONS: readonly LabSection[] = [
       'Practice accessibility decisions for decorative and meaningful images.',
     ],
   },
-  {
-    order: '10',
-    path: '/diagnostics',
-    shortTitle: 'Diagnostics',
-    title: 'Warnings, Diagnostics, and Broken Examples',
-    summary: 'Reserved for intentional mistakes that help you learn Angular development warnings.',
-    learningGoals: [
-      'Create one broken example at a time.',
-      'Read console warnings and map them back to template code.',
-      'Keep fixes documented beside each failing case.',
-    ],
-  },
 ];
 
 export const DEMO_SECTIONS = LAB_SECTIONS.filter((section) => section.path !== '/');

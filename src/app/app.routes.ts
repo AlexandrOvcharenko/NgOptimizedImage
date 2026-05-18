@@ -65,12 +65,6 @@ export const routes: Routes = [
     title: 'Background Migration | NgOptimizedImage Lab',
   },
   {
-    path: 'diagnostics',
-    loadComponent: () =>
-      import('./pages/diagnostics/diagnostics.component').then((m) => m.DiagnosticsComponent),
-    title: 'Diagnostics | NgOptimizedImage Lab',
-  },
-  {
     path: '**',
     redirectTo: '',
   },
